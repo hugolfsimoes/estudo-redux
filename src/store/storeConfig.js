@@ -1,14 +1,22 @@
-import { combineReducers, createStore } from 'redux';
 
+import { combineReducers, legacy_createStore as createStore } from 'redux';
 const reducers = combineReducers({
   numeros: function (state, action) {
-    console.log(state, action);
-    return {
-      min: 1,
-      max: 10
-    };
+    switch (action.type) {
+      case 'NUM_MIN_ALTERADO':
+        return {
+          ...state,
+          min: action.payload
+        };
+      default:
+        return {
+          min: 7,
+          max: 31
+        };
+    }
   },
   nomes: function (state, action) {
+    console.log('NOMES');
     console.log(state, action);
     return [
       'Ana', 'Bia', 'Carlos'
