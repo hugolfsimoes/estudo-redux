@@ -6,3 +6,10 @@ export const alterarNumeroMinimo = (novoNumero) => {
     payload: novoNumero
   };
 };
+
+export const alterarNumeroMaximo = (novoNumero) => {
+  return {
+    type: 'NUM_MAX_ALTERADO',
+    payload: novoNumero
+  };
+};
