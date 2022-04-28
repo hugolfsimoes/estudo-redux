@@ -1,15 +1,15 @@
-
+import { NUM_MAX_ALTERADO, NUM_MIN_ALTERADO } from './actionTypes';
 //Action Creator
 export const alterarNumeroMinimo = (novoNumero) => {
   return {
-    type: 'NUM_MIN_ALTERADO',
+    type: NUM_MIN_ALTERADO,
     payload: novoNumero
   };
 };
 
 export const alterarNumeroMaximo = (novoNumero) => {
   return {
-    type: 'NUM_MAX_ALTERADO',
+    type: NUM_MAX_ALTERADO,
     payload: novoNumero
   };
 };
